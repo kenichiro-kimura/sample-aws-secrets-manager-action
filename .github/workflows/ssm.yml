@@ -22,7 +22,9 @@ jobs:
       - name: Get secrets by name and by ARN
         uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
-          secret-ids: ${{ secrets.SSM_ARN }}            
+          secret-ids: |
+            ${{ secrets.SSM_ARN }}            
+            testkey
       - name: Run a one-line script
         run: env
         env:
