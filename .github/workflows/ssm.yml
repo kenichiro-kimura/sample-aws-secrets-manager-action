@@ -28,4 +28,6 @@ jobs:
             testplainkey
           parse-json-secrets: true
       - name: Run a one-line script
-        run: env
+        run: |
+          env > .env
+          cat .env
