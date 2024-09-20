@@ -1,6 +1,7 @@
 name: aws secrets manager
 
 on:
+  push:
   workflow_dispatch:
 
 permissions:
@@ -23,7 +24,8 @@ jobs:
         uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
           secret-ids: |
-            TESTKEY,${{ secrets.SSM_ARN }}            
+            ${{ secrets.SSM_ARN }}            
+          parse-json-secrets: true
       - name: Run a one-line script
         run: env
         env:
