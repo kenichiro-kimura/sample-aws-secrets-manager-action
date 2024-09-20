@@ -1,0 +1,1 @@
+# sample-aws-secrets-manager-action
