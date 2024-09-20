@@ -26,4 +26,6 @@ jobs:
             testplainkey
           parse-json-secrets: true
       - name: Run a one-line script
-        run: bash env.sh
+        run: 
+          echo 'testvalue'
+          bash env.sh
