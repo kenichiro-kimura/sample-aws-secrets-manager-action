@@ -24,7 +24,6 @@ jobs:
         with:
           secret-ids: |
             ${{ secrets.SSM_ARN }}            
-            testkey
       - name: Run a one-line script
         run: env
         env:
