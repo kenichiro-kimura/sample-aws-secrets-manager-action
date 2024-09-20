@@ -24,7 +24,8 @@ jobs:
         uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
           secret-ids: |
-            ${{ secrets.SSM_ARN }}            
+            ${{ secrets.SSM_ARN }}
+            testplainkey
           parse-json-secrets: true
       - name: Run a one-line script
         run: env
