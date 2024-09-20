@@ -23,7 +23,7 @@ jobs:
         uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
           secret-ids: |
-            ${{ secrets.SSM_ARN }}            
+            TESTKEY,${{ secrets.SSM_ARN }}            
       - name: Run a one-line script
         run: env
         env:
